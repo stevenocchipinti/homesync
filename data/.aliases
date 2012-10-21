@@ -1,0 +1,27 @@
+# Command aliases
+alias grep="grep -n --color=always"
+alias n="nautilus ./"
+alias tree="tree -CA"
+alias gh="cat /etc/hosts | grep"
+alias pyhttp="python -m SimpleHTTPServer"
+
+# TramTracker aliases
+alias tt="tramtracker 1725"
+alias wtt="watch -n 15 tramtracker 1725"
+
+# Lazy aliases
+alias ls="ls --color=always"
+alias l="ls"
+alias ll="ls -lh"
+alias la="ls -a"
+alias lal="ls -alh"
+
+# Development aliases
+# These are provided by the oh-my-zsh plugins for rake and bundler
+alias brake="bundle exec rake"
+alias be="bundle exec"
+
+# Aliases to jump to locations
+alias N="ssh -p 6500 steve@noboost.org"
+alias W="cd /var/www"
+alias U="cd ~/code/ruby/Unanidate"

@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'open-uri'
+
+unless ARGV[0]
+  puts "Usage: #{$0} <stop-id>"
+  exit 0
+end
+
+# Configuration
+url = "http://www.tramtracker.com.au/?id=#{ARGV[0]}"
+regex = /\d*\) Rte (\d*)<br>\r\n(\d*)/
+
+open(url).read.scan(regex) do |matches|
+  printf "Route %3s arriving in %2s minutes\n", matches[0], matches[1]
+end

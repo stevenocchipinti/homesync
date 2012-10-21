@@ -1,0 +1,95 @@
+[user]
+  name = Steven Occhipinti
+  email = dev@stevenocchipinti.com
+
+# The majority of this file was from Bobes and may need tweaking
+
+[color]
+  diff = auto
+  branch = auto
+  interactive = auto
+  pager = true
+  status = auto
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  old = red
+  new = green
+[color "status"]
+  added = green
+  changed = red
+  untracked = cyan
+
+[core]
+  excludesfile = ~/.gitignore-global
+  pager = less -FRSX
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[branch]
+  autosetupmerge = true
+
+[diff]
+  renames = copy
+  tool = meld
+
+[format]
+  pretty = %C(yellow)%h%C(red)%d %C(reset)%s %C(green)%an %C(bold black)%cr
+
+[log]
+  date = relative
+
+[pager]
+  status = true
+  show-branch = true
+
+[push]
+  default = tracking
+
+[rebase]
+  stat = true
+
+[rerere]
+  # remembers manual conflict resolutions so you don't have to redo them later
+  enabled = true
+  autoupdate = true
+
+# This block of aliases should be last in this file (see ~/.bash_git)
+[alias]
+  a = add
+  aa = add .
+  ap = add -p
+  c = commit -v
+  ca = commit -v -a
+  cam = commit -v --amend
+  co = checkout
+  b = branch
+  d = diff
+  dw = diff --word-diff
+  dc = diff --cached
+  dt = difftool
+  m = merge
+  mt = mergetool
+  f = fetch
+  ps = push
+  pl = pull
+  l = log -n 20
+  lf = log
+  g = log --graph --decorate
+  ga = log --graph --decorate --all
+  r = reset
+  rm = rm
+  s = status -sb
+  st = status -sb
+  sh = show
+  sf = show --pretty=full
+  u = reset HEAD --
+  rb = rebase
+  w = whatchanged
+  wp = whatchanged -p
+  edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; mate `f`"
+  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
