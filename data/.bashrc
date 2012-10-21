@@ -1,19 +1,17 @@
 # .bashrc
 
 # Source the aliases
-if [ -f ~/.aliases ]; then
-  . ~/.aliases
-fi
+[ -f ~/.aliases ] && . ~/.aliases
 
 # Enable bash completion in interactive shells
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+[ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 
 # Source Mac specific settings
-if [ `uname` == 'Darwin' ] && [ -f ~/.mac ]; then
-  . ~/.mac
-fi
+[ `uname` == 'Darwin' ] && [ -f ~/.mac ] && . ~/.mac
+
+# Source REA specific settings
+[ -f ~/.rea ] && . ~/.rea
+
 
 # Source git (and ruby) stuff (including the prompt)
 if [ -f ~/.bash_git ]; then
