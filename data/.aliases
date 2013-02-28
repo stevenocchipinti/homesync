@@ -17,9 +17,11 @@ alias la="ls -a"
 alias lal="ls -alh"
 
 # Development aliases
-# These are provided by the oh-my-zsh plugins for rake and bundler
-alias brake="bundle exec rake"
 alias be="bundle exec"
+alias brake="bundle exec rake"
+alias brails="bundle exec rake"
+alias brspec="bundle exec rspec"
+alias bcucumber="bundle exec cucumber"
 
 # Aliases to jump to locations
 alias N="ssh -p 6500 steve@noboost.org"
