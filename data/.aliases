@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Command aliases
 alias grep="grep -n --color=always"
 alias n="nautilus ./"
@@ -16,12 +18,12 @@ alias ll="ls -lh"
 alias la="ls -a"
 alias lal="ls -alh"
 
-# Development aliases
+# Bundler helpers (be, brake, brails, etc.)
 alias be="bundle exec"
-alias brake="bundle exec rake"
-alias brails="bundle exec rails"
-alias brspec="bundle exec rspec"
-alias bcucumber="bundle exec cucumber"
+BE_ALIASES=(ruby rake rails rspec cucumber)
+for a in ${BE_ALIASES[@]}; do
+  alias b$a="bundle exec $a"
+done
 
 # Aliases to jump to locations
 alias N="ssh -p 6500 steve@noboost.org"
