@@ -2,6 +2,7 @@
 
 # Command aliases
 alias grep="grep -n --color=always"
+alias less="less -R"
 alias n="nautilus ./"
 alias tree="tree -CA"
 alias gh="cat /etc/hosts | grep"
