@@ -55,7 +55,9 @@ bind '"\e[B"':history-search-forward
 #   eg dkpun@chamois4:~/$ !grep<space>
 bind Space:magic-space
 
-# This loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Aliases are stored in ~/.aliases
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
