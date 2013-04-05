@@ -19,6 +19,7 @@ layout dual 'Google Chrome':REPEAT     throw 0 resize:screenSizeX;screenSizeY
 layout dual 'Microsoft Outlook'        throw 1 resize:screenSizeX;screenSizeY
 layout dual 'Skype'                    throw 1 resize:screenSizeX;screenSizeY
 layout dual 'Adium':REPEAT             throw 1 resize
+layout dual 'LimeChat'                 throw 1 resize
 
 default single count:1
 default dual count:2
