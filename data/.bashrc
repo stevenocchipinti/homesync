@@ -31,6 +31,8 @@ else
   # There is also one of these in the bash_git file
   export PS1="$BOLD_GREEN\u@\h$NO_COLOR:$BOLD_BLUE\w\n$YELLOW[\!]$NO_COLOR\\$> "
   #export PS1="$GREEN\u@\h:$YELLOW\w\n$YELLOW[\!]$NO_COLOR\\$> "
+  # TODO: Add error code to prompt like this:
+  # \u@\h.\[\e[33;40m\]cp`r=$?; test $r -ne 0 && echo " \[\e[1;24;31;40m\]($r)"`\[\e[m\] \W \$
 fi
 
 # User specified $PATH
