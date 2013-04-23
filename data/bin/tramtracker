@@ -1,16 +1,47 @@
 #!/usr/bin/env ruby
 require 'open-uri'
+require 'optparse'
+
+
+options = {
+  poll: nil,
+  max_iterations: 1
+}
+
+optparse = OptionParser.new do |opts|
+  opts.banner = "Usage: tramtracker [options] <stop-id>"
+
+  opts.on('-p', '--poll', "Poll every 15 seconds") do
+    options[:poll] = 15
+    options[:max_iterations] = 60
+  end
+
+  opts.on('-h', '--help', 'Display this screen') do
+    puts opts
+    exit
+  end
+end
+optparse.parse!
 
 unless ARGV[0]
-  puts "Usage: #{$0} <stop-id>"
-  exit 0
+  puts optparse
+  exit 1
 end
 
-# Configuration
+
+
 url = "http://www.tramtracker.com.au/?id=#{ARGV[0]}"
 regex = /\d*\) Rte (\d*)<br>\r\n(\d*)/
 
-puts Time.now
-open(url).read.scan(regex) do |matches|
-  printf "Route %3s arriving in %2s minutes\n", matches[0], matches[1]
+options[:max_iterations].times do |i|
+  puts Time.now
+
+  open(url).read.scan(regex) do |matches|
+    printf "Route %3s arriving in %2s minutes\n", matches[0], matches[1]
+  end
+
+  if i+1 < options[:max_iterations]
+    sleep options[:poll]
+    puts ""
+  end
 end
