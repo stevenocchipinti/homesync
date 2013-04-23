@@ -63,6 +63,7 @@
   a = add
   aa = add .
   ap = add -p
+  ai = add -i
   c = commit -v
   ca = commit -v -a
   cam = commit -v --amend
@@ -75,8 +76,8 @@
   m = merge
   mt = mergetool
   f = fetch
-  ps = push
-  pl = pull
+  p = pull
+  pr = pull --rebase
   l = log -n 20
   lf = log
   g = log --graph --decorate
