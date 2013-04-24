@@ -45,3 +45,23 @@ options[:max_iterations].times do |i|
     puts ""
   end
 end
+
+
+# EXAMPLE CURSES SCRIPT
+# ---------------------
+#
+# #!/usr/bin/env ruby
+# require 'curses'
+
+# def clear_and_print(str)
+#   Curses.clear
+#   Curses.setpos(0, 0)
+#   Curses.addstr(str);
+#   Curses.refresh
+# end
+
+
+# clear_and_print "Hello world"
+# sleep 1
+# clear_and_print "Bla blablablabla"
+# sleep 3
