@@ -2,6 +2,9 @@
   name = Steven Occhipinti
   email = dev@stevenocchipinti.com
 
+[init]
+  templatedir = ~/.git_template
+
 # The majority of this file was from Bobes and may need tweaking
 
 [color]
