@@ -25,12 +25,12 @@ for a in ${BE_ALIASES[@]}; do
 done
 
 # Zeus helpers (zrake, zrails, etc.)
-ZEUS_ALIASES=(rake server s console c destroy d generate g
-  dbconsole test testrb rspec cucumber runner)
-alias z="zeus"
-for a in ${ZEUS_ALIASES[@]}; do
-  alias z$a="zeus $a"
-done
+#ZEUS_ALIASES=(rake server s console c destroy d generate g
+#  dbconsole test testrb rspec cucumber runner)
+#alias z="zeus"
+#for a in ${ZEUS_ALIASES[@]}; do
+#  alias z$a="zeus $a"
+#done
 
 # Aliases to jump to locations
 alias N="ssh -p 6500 steve@noboost.org"

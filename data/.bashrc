@@ -57,6 +57,9 @@ bind '"\e[B"':history-search-forward
 #   eg dkpun@chamois4:~/$ !grep<space>
 bind Space:magic-space
 
+# Use z for changing directories
+source ~/bin/z.sh
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
