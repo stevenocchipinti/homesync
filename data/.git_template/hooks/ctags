@@ -10,5 +10,5 @@ fi
 set -e
 PATH="/usr/local/bin:$PATH"
 trap "rm -f tags.$$" EXIT
-ctags -R --exclude=.git --exclude=log -f tags.$$ * $(bundle show --paths) $*
+ctags -R --exclude=node_modules --exclude=.git --exclude=log -f tags.$$ * $(bundle show --paths) $*
 mv tags.$$ tags
