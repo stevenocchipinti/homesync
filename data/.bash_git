@@ -110,12 +110,8 @@ function parse_git_branch {
 #############
 
 function parse_ruby_version {
-  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="@$gemset"
-  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
-  # [ "$version" == "1.8.7" ] && version=""
-  local full="$version$gemset"
-  [ "$full" != "" ] && echo "$full "
+  local version=$(echo $RUBY_VERSION)
+  [ "$version" != "" ] && echo "$version "
 }
 
 
@@ -143,5 +139,5 @@ GITALIASES=`awk "NR>=$[LINENUM+1]" ~/.gitconfig | cut -d '=' -f 1`
 alias g='git'
 for command in $GITALIASES
 do
-    alias "g$command"="g $command"
+  alias "g$command"="g $command"
 done
