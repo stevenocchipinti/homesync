@@ -15,12 +15,12 @@ layout single 'Google Chrome':REPEAT   push up bar-resize:screenSizeY
 layout single 'Microsoft Outlook'      push up bar-resize:screenSizeY
 bind 1:${leader} layout single
 
-layout dual 'iTerm'                    throw 1 resize:screenSizeX;screenSizeY
-layout dual 'Google Chrome':REPEAT     throw 1 resize:screenSizeX;screenSizeY
-layout dual 'Microsoft Outlook'        throw 0 resize:screenSizeX;screenSizeY
-layout dual 'Skype'                    throw 0 resize:screenSizeX;screenSizeY
-layout dual 'Adium':REPEAT             throw 0 resize
-layout dual 'LimeChat'                 throw 0 resize
+layout dual 'iTerm'                    throw 0 resize:screenSizeX;screenSizeY
+layout dual 'Google Chrome':REPEAT     throw 0 resize:screenSizeX;screenSizeY
+layout dual 'Microsoft Outlook'        throw 1 resize:screenSizeX;screenSizeY
+layout dual 'Skype'                    throw 1 resize:screenSizeX;screenSizeY
+layout dual 'Adium':REPEAT             throw 1 resize
+layout dual 'LimeChat'                 throw 1 resize
 bind 2:${leader} layout dual
 
 default single count:1

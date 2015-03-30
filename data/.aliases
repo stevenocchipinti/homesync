@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # Command aliases
+alias vi="vim"
 alias grep="grep -n --color=always"
 alias less="less -R"
 alias n="nautilus ./"
 alias tree="tree -CA"
 alias gh="cat /etc/hosts | grep"
-alias pyhttp="python -m SimpleHTTPServer"
 alias tt="tramtracker"
+alias gpg="gpg2"
+alias pyhttp="python -m SimpleHTTPServer"
 alias rbhttp="ruby -run  -e httpd . -p 9090"
 
 # Lazy aliases
@@ -23,14 +25,3 @@ alias be="bundle exec"
 for a in ${BE_ALIASES[@]}; do
   alias b$a="bundle exec $a"
 done
-
-# Zeus helpers (zrake, zrails, etc.)
-#ZEUS_ALIASES=(rake server s console c destroy d generate g
-#  dbconsole test testrb rspec cucumber runner)
-#alias z="zeus"
-#for a in ${ZEUS_ALIASES[@]}; do
-#  alias z$a="zeus $a"
-#done
-
-# Aliases to jump to locations
-alias N="ssh -p 6500 steve@noboost.org"

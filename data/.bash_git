@@ -106,8 +106,8 @@ function parse_git_branch {
 
 
 #
-# RVM STATUS
-#############
+# CHRUBY STATUS
+###############
 
 function parse_ruby_version {
   local version=$(echo $RUBY_VERSION)

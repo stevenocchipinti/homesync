@@ -61,10 +61,13 @@
   enabled = true
   autoupdate = true
 
+[commit]
+  template = /Users/steve.occhipinti/.git_commit_template
+
 # This block of aliases should be last in this file (see ~/.bash_git)
 [alias]
   a = add
-  aa = add .
+  aa = add -A .
   ap = add -p
   ai = add -i
   c = commit -v
@@ -78,8 +81,8 @@
   f = fetch
   p = pull
   pr = pull --rebase
-  l = log -n 20 --graph --decorate
-  la = log -n 20 --graph --decorate --all
+  l = log --graph --decorate
+  la = log --graph --decorate --all
   s = status -sb
   st = status -sb
   sh = show
