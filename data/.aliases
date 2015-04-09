@@ -11,6 +11,7 @@ alias tt="tramtracker"
 alias gpg="gpg2"
 alias pyhttp="python -m SimpleHTTPServer"
 alias rbhttp="ruby -run  -e httpd . -p 9090"
+alias unsafe-chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=~/Library/Application\ Support/Google/UnsafeChrome --disable-web-security 2> /dev/null"
 
 # Lazy aliases
 alias ls="ls --color=always"
