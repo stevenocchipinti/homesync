@@ -66,3 +66,10 @@ source ~/bin/z.sh
 # Aliases are stored in ~/.aliases
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export ANDROID_HOME="/opt/adt-bundle-mac-x86_64-20140702/sdk/"
+
+which direnv && eval "$(direnv hook bash)"
