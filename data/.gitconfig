@@ -80,8 +80,8 @@
   co = checkout
   b = branch
   d = diff
-  dw = diff --word-diff
   dc = diff --cached
+  dw = diff --word-diff
   f = fetch
   p = pull
   pr = pull --rebase
@@ -89,8 +89,7 @@
   la = log --graph --decorate --all
   s = status -sb
   st = status -sb
-  sh = show
-  sf = show --pretty=full
+  sh = show --pretty=full
   ri = rebase -i
   rc = rebase --continue
   ra = rebase --abort
