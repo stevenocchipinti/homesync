@@ -60,13 +60,6 @@ bind Space:magic-space
 # Use z for changing directories
 source ~/bin/z.sh
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Aliases are stored in ~/.aliases
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
