@@ -65,7 +65,7 @@
   template = /Users/steve.occhipinti/.git_commit_template
 
 [hub]
-  host = git.***REMOVED***.com.au
+  host = git.realestate.com.au
   protocol = ssh
 
 # This block of aliases should be last in this file (see ~/.bash_git)
