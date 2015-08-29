@@ -26,3 +26,12 @@ alias be="bundle exec"
 for a in ${BE_ALIASES[@]}; do
   alias b$a="bundle exec $a"
 done
+
+# sudo with environment (useful for `sudo be rails server -p 80`)
+function esudo { sudo -E bash -c "$*"; }
+
+# curl helpers
+alias curl-json='curl -H "Content-Type:application/json; charset=utf-8"'
+# eg. A simple POST request: curl-json -d '{}' localhost:3000
+
+# vim: nowrap:
