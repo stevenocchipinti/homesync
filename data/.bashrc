@@ -6,12 +6,6 @@
 # Enable bash completion in interactive shells
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 
-# Source Mac specific settings
-[ `uname` == 'Darwin' ] && [ -f ~/.mac ] && . ~/.mac
-
-# Source REA specific settings
-[ -f ~/.rea ] && . ~/.rea
-
 
 # Source git (and ruby) stuff (including the prompt)
 if [ -f ~/.bash_git ]; then
@@ -66,3 +60,18 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export ANDROID_HOME="/opt/adt-bundle-mac-x86_64-20140702/sdk/"
 
 which direnv && eval "$(direnv hook bash)"
+
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+
+
+# These are sources last so they override anything in here
+
+# Source Mac specific settings
+[ `uname` == 'Darwin' ] && [ -f ~/.mac ] && . ~/.mac
+
+# Source REA specific settings
+[ -f ~/.rea ] && . ~/.rea
+
+
+export NVM_DIR="/Users/steve.occhipinti/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
