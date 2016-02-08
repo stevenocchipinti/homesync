@@ -9,20 +9,3 @@ bind i:${leader}                       throw 0    resize:screenSizeX;screenSizeY
 bind o:${leader}                       throw 1    resize:screenSizeX;screenSizeY
 bind g:${leader}                       grid padding:5 0:6,6 1:6,6
 bind ;:${leader}                       hint JKLH
-
-layout single 'iTerm'                  push up bar-resize:screenSizeY
-layout single 'Google Chrome':REPEAT   push up bar-resize:screenSizeY
-layout single 'Microsoft Outlook'      push up bar-resize:screenSizeY
-bind 1:${leader} layout single
-
-layout dual 'iTerm'                    throw 0 resize:screenSizeX;screenSizeY
-layout dual 'Google Chrome':REPEAT     throw 0 resize:screenSizeX;screenSizeY
-layout dual 'Microsoft Outlook'        throw 1 resize:screenSizeX;screenSizeY
-layout dual 'Skype'                    throw 1 resize:screenSizeX;screenSizeY
-layout dual 'Adium':REPEAT             throw 1 resize
-layout dual 'LimeChat'                 throw 1 resize
-bind 2:${leader} layout dual
-
-default single count:1
-default dual count:2
-default dual count:2
