@@ -11,3 +11,6 @@ chruby 2.3
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
+
+# How to flush the cache on a mac
+alias dnsflush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; echo Cache flushed!"
