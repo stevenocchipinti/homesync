@@ -30,7 +30,6 @@
 
 [core]
   excludesfile = ~/.gitignore-global
-  pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [branch]
@@ -38,7 +37,6 @@
 
 [diff]
   renames = copy
-  tool = meld
 
 [format]
   pretty = %C(yellow)%h%C(red)%d %C(reset)%s %C(green)%an %C(bold black)%cr
