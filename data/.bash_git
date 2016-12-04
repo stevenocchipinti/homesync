@@ -132,12 +132,12 @@ export PROMPT_COMMAND='echo -ne "\033]0;$(basename "$(dirname "$PWD")")/$(basena
 
 # Assuming git aliases are last in ~./gitconfig
 # Find the line where the aliases are listed from and get all aliases
-LINENUM=`grep -n --color=never "\[alias\]" ~/.gitconfig | cut -d ':' -f 1`
-GITALIASES=`awk "NR>=$[LINENUM+1]" ~/.gitconfig | cut -d '=' -f 1`
+# LINENUM=`grep -n --color=never "\[alias\]" ~/.gitconfig | cut -d ':' -f 1`
+# GITALIASES=`awk "NR>=$[LINENUM+1]" ~/.gitconfig | cut -d '=' -f 1`
 
-#alias git='hub'
-alias g='git'
-for command in $GITALIASES
-do
-  alias "g$command"="g $command"
-done
+alias git='hub'
+# alias g='git'
+# for command in $GITALIASES
+# do
+#   alias "g$command"="g $command"
+# done
