@@ -4,10 +4,12 @@
         "browser": true,
         "node": true
     },
-    "settings": {
-        "ecmascript": 6,
-        "jsx": true
-    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        }
+    }
     "plugins": [
         "react"
     ],
