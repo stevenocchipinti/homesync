@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# This script is probably incomplete
+
+function chjava {
+  if [ -z "$1" ]
+  then
+    echo "USAGE: chjava <java-version>"
+    echo ""
+    /usr/libexec/java_home -V
+  else
+    export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+  fi
+}
