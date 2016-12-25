@@ -1,7 +1,8 @@
 export EDITOR="mvim -v"
 
 alias ls="ls -G"
-alias vim="mvim -v"
+#alias vim="mvim -v"
+alias vim="nvim"
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
