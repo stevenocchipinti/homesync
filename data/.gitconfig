@@ -1,6 +1,7 @@
 [user]
-  name = Steven Occhipinti
-  email = ***REMOVED***
+  name = Steve Occhipinti
+  # email left intentially blank to encourage setting it per repository
+  useConfigOnly = true
 
 [init]
   templatedir = ~/.git_template
