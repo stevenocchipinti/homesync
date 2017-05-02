@@ -4,9 +4,12 @@ alias ls="ls -G"
 #alias vim="mvim -v"
 alias vim="nvim"
 
+# Start the screensaver (which will lock the screen without sleeping)
+alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby 2.3.1
+chruby 2.4
 
 # https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
