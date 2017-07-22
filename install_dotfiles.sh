@@ -1,14 +1,14 @@
 #!/bin/bash
 ################################################################################
 #                                                                              #
-#                                  HomeSync                                    #
+#                        HomeSync - install_dotfiles.sh                        #
+#                                                                              #
+# This script will make symlinks in $HOME to all the files in $HOMESYNC/$DATA  #
+# If that file already exists, it will back it up to $BACKUP                   #
 #                                                                              #
 # @steveocchipinti                                                             #
 # http://StevenOcchipinti.com                                                  #
 # https://github.com/stevenocchipinti/homesync                                 #
-#                                                                              #
-# This script will make symlinks in $HOME to all the files in $HOMESYNC/$DATA  #
-# If that file already exists, it will back it up to $BACKUP                   #
 #                                                                              #
 ################################################################################
 
