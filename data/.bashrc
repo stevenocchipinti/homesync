@@ -35,6 +35,9 @@ export PATH=$PATH:/usr/kerberos/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/b
 # Make vim the default editor for things like svn, etc.
 export EDITOR=vim
 
+# Do not store commands that start with a space in the bash_history file
+export HISTCONTROL=ignorespace
+
 # Make bash behave like vim!
 #set -o vi
 # Make sure Ctrl-L still clears the screen in vi-mode
@@ -62,7 +65,6 @@ export ANDROID_HOME="/opt/adt-bundle-mac-x86_64-20140702/sdk/"
 # which direnv && eval "$(direnv hook bash)"
 
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
-
 
 # These are sources last so they override anything in here
 

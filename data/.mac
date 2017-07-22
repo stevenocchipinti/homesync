@@ -9,7 +9,7 @@ alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resou
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby 2.4
+chruby 2.4.1
 
 # https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
