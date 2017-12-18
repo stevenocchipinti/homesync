@@ -18,7 +18,7 @@ if ! hash brew 2> /dev/null; then
 fi
 
 # Generic stuff
-brew install cask wget tree nmap ctags git hub bash-completion keepingyouawake atom
+brew install cask wget tree nmap ctags git hub bash-completion keepingyouawake visual-studio-code
 brew cask install iterm2 mattr-slate slack docker gimp
 
 # Vim
