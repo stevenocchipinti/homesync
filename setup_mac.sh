@@ -34,3 +34,9 @@ ruby-install ruby --no-reinstall
 brew install node
 npm install -g n yarn
 n latest
+
+# Fish (fry uses ruby-install, fnm needs its own install)
+brew install fish
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+fish --command="fisher terlar/fry fnm z"
+fish --command="fnm lts"
