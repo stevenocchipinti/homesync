@@ -2,8 +2,8 @@
 # Rebase a whole repository onto the current repository as a new branch
 
 # Usage
-if [ $# -ne 1 || $# -ne 2 ]; then
-  echo "Usage: git rebase-whole-repo <repo-to-pull-from> [<new-branch>]"
+if [ $# -ne 1 ] || [ $# -ne 2 ]; then
+  echo "Usage: git rebase-whole-repo <repo-to-pull-from> [<new-branch-name>]"
   exit 1
 fi
 
