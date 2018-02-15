@@ -1,0 +1,26 @@
+#!/bin/bash
+
+red="\[\033[0;31m\]"
+yellow="\[\033[0;33m\]"
+green="\[\033[0;32m\]"
+blue="\[\033[0;34m\]"
+white="\[\033[1;37m\]"
+gray="\[\033[1;30m\]"
+purple="\[\033[0;35m\]"
+no_color="\[\e[0m\]"
+
+
+function extract_version_from {
+  echo $1 | \grep -o "\d\+\.\d\+\.\d\+"
+}
+
+
+function prompt_command {
+  [ $? -eq 0 ] && local status_color=$purple || local status_color=$red
+  local node_version="$(extract_version_from "$(node -v)")"
+  local ruby_version="$(extract_version_from "$(ruby -v)")"
+  local git_prompt="$(~/.git_status_prompt)"
+
+  export PS1="$green$node_version $red$ruby_version $blue\w\n$gray$git_prompt$status_color\\$>$no_color "
+}
+export PROMPT_COMMAND=prompt_command
