@@ -1,14 +1,6 @@
 #!/bin/sh
 
-## from http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
+# A super-simplified version of the one from Tim Pope:
+#   http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 
-which ctags > /dev/null
-if [ $? -ne "0" ]; then
-  exit 1
-fi
-
-set -e
-PATH="/usr/local/bin:$PATH"
-trap "rm -f tags.$$" EXIT
-ctags -R --exclude=node_modules --exclude=.git --exclude=log -f tags.$$ * $(bundle show --paths) $*
-mv tags.$$ tags
+ctags $(git ls-files)

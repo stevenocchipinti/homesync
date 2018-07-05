@@ -18,8 +18,10 @@ if ! hash brew 2> /dev/null; then
 fi
 
 # Generic stuff
-brew install cask wget tree nmap ctags git hub bash-completion keepingyouawake visual-studio-code
+brew install cask wget tree nmap git hub bash-completion keepingyouawake visual-studio-code
 brew cask install iterm2 mattr-slate slack docker gimp
+# While universal-ctags is still in dev
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 # Vim
 brew install macvim neovim
