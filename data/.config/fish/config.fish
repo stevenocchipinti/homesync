@@ -1,4 +1,4 @@
 set -x EDITOR nvim
-alias vim=nvim
+set -x PATH ~/bin $PATH
 
 set PATH ~/bin $PATH

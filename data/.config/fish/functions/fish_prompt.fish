@@ -5,6 +5,16 @@ end
 function fish_prompt --description 'Write out the prompt'
   set -l last_status $status
 
+  # Background jobs
+  set -l jobs (jobs | wc -l | tr -d '[:space:]')
+  if test $jobs -eq 1
+    set_color magenta
+    echo -n '⎋ '
+  else if test $jobs -gt 1
+    set_color magenta
+    echo -n $jobs'⎋ '
+  end
+
   # Node version
   set_color green
   set -l node_version (extract_version_from (node -v))

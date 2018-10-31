@@ -66,7 +66,7 @@ function print_git_status_prompt {
 
 
   echo -n "$noauthor"
-  echo -n "${branch##refs/heads/}"
+  echo -n " ${branch##refs/heads/}"
   echo -n "$stash$untracked$rebase$unstaged$staged"
 }
 
