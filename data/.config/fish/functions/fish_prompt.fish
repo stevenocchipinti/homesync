@@ -34,6 +34,16 @@ function fish_prompt --description 'Write out the prompt'
   end
   echo (prompt_pwd)
 
+  # Valid AWS auth
+  set_color normal
+  if test -n "$AWS_SESSION_EXPIRES"
+    set -l aws_session_expiry (date -j -u -f "%FT%TZ" $AWS_SESSION_EXPIRES +%s)
+    set -l current_time (date -u +%s)
+    if test $aws_session_expiry -gt $current_time;
+      echo -n "🔐  "
+    end
+  end
+
   # Git status prompt
   set_color normal
   set -l git_prompt (~/.git_status_prompt)

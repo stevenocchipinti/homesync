@@ -1,4 +1,4 @@
-function yarnrun --description 'An interactive version of `yarn run`'
+function yr --description 'An interactive version of `yarn run`'
   set output (yarn run 2> /dev/null)
 
   echo-bold "Commands available from bin scripts:"
