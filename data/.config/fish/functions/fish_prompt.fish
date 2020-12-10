@@ -9,26 +9,21 @@ function fish_prompt --description 'Write out the prompt'
   set -l jobs (jobs | wc -l | tr -d '[:space:]')
   if test $jobs -eq 1
     set_color magenta
-    echo -n '⎋ '
+    echo -n ' '
   else if test $jobs -gt 1
     set_color magenta
-    echo -n $jobs'⎋ '
+    echo -n $jobs' '
   end
 
   # Node version
   set_color green
   set -l node_version (extract_version_from (node -v))
-  echo -n $node_version' '
-
-  # Ruby version
-  set_color red
-  set -l ruby_version (extract_version_from (ruby -v))
-  echo -n $ruby_version' '
+  echo -n ' '$node_version' '
 
   # Responsive PWD
   set_color blue
   set -g fish_prompt_pwd_dir_length 0
-  set -l pwd_length (string length $node_version' '$ruby_version' '(prompt_pwd))
+  set -l pwd_length (string length $node_version' '(prompt_pwd))
   if test $pwd_length -gt $COLUMNS
     set -g fish_prompt_pwd_dir_length 1
   end
@@ -40,7 +35,7 @@ function fish_prompt --description 'Write out the prompt'
     set -l aws_session_expiry (date -j -u -f "%FT%TZ" $AWS_SESSION_EXPIRES +%s)
     set -l current_time (date -u +%s)
     if test $aws_session_expiry -gt $current_time;
-      echo -n "🔐  "
+      echo -n " "
     end
   end
 
@@ -54,6 +49,6 @@ function fish_prompt --description 'Write out the prompt'
   if not test $last_status -eq 0
     set_color $fish_color_error
   end
-  echo -n '➤ '
+  printf "\uf739 "
   set_color normal
 end

@@ -40,8 +40,9 @@
 [diff]
   renames = copy
 
-[format]
-  pretty = %C(yellow)%h%C(red)%d %C(reset)%s %C(green)%an %C(bold black)%cr
+# Custom format called 'nice'
+[pretty]
+  nice = %C(yellow)%h%C(red)%d %C(reset)%s %C(green)%an %C(bold black)%cr
 
 [log]
   date = relative
@@ -88,18 +89,21 @@
   f = fetch
   p = pull
   pr = pull --rebase
-  l = log --graph --decorate
-  la = log --graph --decorate --all
+  l = log --graph --format=nice
+  la = log --graph --format=nice --all
   s = status -sb
   st = status -sb
-  show = show --pretty=full
   ri = rebase -i
   rc = rebase --continue
   ra = rebase --abort
-	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+  serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[pull]
+	ff = only
