@@ -4,7 +4,6 @@
   useConfigOnly = true
 
 [init]
-  templatedir = ~/.git_template
   defaultBranch = main
 
 # The majority of this file was from Bobes and may need tweaking
