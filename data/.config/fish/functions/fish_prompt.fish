@@ -27,7 +27,7 @@ function fish_prompt --description 'Write out the prompt'
   if test $pwd_length -gt $COLUMNS
     set -g fish_prompt_pwd_dir_length 1
   end
-  echo (prompt_pwd)
+  prompt_pwd
 
   # Valid AWS auth
   set_color normal
@@ -41,8 +41,7 @@ function fish_prompt --description 'Write out the prompt'
 
   # Git status prompt
   set_color normal
-  set -l git_prompt (~/.git_status_prompt)
-  echo -n $git_prompt
+  git_prompt
 
   # Colored icon based on exit status
   set_color white
