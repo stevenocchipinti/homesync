@@ -17,8 +17,11 @@ function fish_prompt --description 'Write out the prompt'
 
   # Node version
   set_color green
-  set -l node_version (extract_version_from (node -v))
-  echo -n ' '$node_version' '
+  set -l node_version ""
+  if type -q node
+    set -l node_version (extract_version_from (node -v))
+    echo -n ' '$node_version' '
+  end
 
   # Responsive PWD
   set_color blue
