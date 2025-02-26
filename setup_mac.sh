@@ -14,7 +14,9 @@
 # Homebrew
 if ! hash brew 2> /dev/null; then
   echo "You need brew, installing it now..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/steve.occhipinti/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Fish
@@ -23,8 +25,8 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fish --command="fisher install jethrokuan/z"
 
 # Generic stuff
-brew install git exa bat fd git-delta ripgrep vifm gnu-sed
-brew install iterm2 visual-studio-code docker keepingyouawake
+brew install git eza bat fd git-delta ripgrep gnu-sed
+brew install iterm2 visual-studio-code docker
 
 # Vim
 brew install neovim
@@ -33,4 +35,3 @@ git clone https://github.com/stevenocchipinti/nvim ~/.config/nvim
 # Javascript
 curl -fsSL https://fnm.vercel.app/install | bash
 fish --command="fnm install --lts"
-fish --command="npm install --global yarn"

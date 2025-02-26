@@ -9,8 +9,14 @@ if type -q nvim
   alias vim=nvim
 end
 
-if type -q exa
-  alias l="exa --icons"
+if type -q eza
+  alias l="eza --icons"
+  alias ls="l"
+  alias la="l -a"
   alias ll="l -l"
+  alias lal="l -al"
   alias lt="l -T"
 end
+
+# Disable the MOTD
+set fish_greeting
