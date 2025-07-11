@@ -1,10 +1,10 @@
 function git_prompt --description 'show git summary in the prompt'
-  set -l fish_prompt_git_status_added '洛'
-  set -l fish_prompt_git_status_modified 'ﰂ '
-  set -l fish_prompt_git_status_deleted 'ﯰ '
-  set -l fish_prompt_git_status_untracked 'ﲉ '
-  set -l fish_prompt_git_status_stash ' '
-  set -l fish_prompt_git_status_unmerged ' '
+  set -l fish_prompt_git_status_added '󰐖 '
+  set -l fish_prompt_git_status_modified ' '
+  set -l fish_prompt_git_status_deleted '󰅘 '
+  set -l fish_prompt_git_status_untracked '󰛲 '
+  set -l fish_prompt_git_status_stash '󰩴 '
+  set -l fish_prompt_git_status_unmerged '󰳤 '
   set -l fish_prompt_git_status_noauthor ' '
 
   set -l fish_prompt_git_status_order \
@@ -55,3 +55,4 @@ function git_prompt --description 'show git summary in the prompt'
 
   set_color normal
 end
+

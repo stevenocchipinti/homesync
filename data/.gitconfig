@@ -1,3 +1,7 @@
+# A good reference for next time I want to edit this file:
+# https://github.com/codingjerk/dotfiles/blob/main/config/git/config
+
+
 [user]
   name = Steve Occhipinti
   # email left intentially blank to encourage setting it per repository
@@ -67,7 +71,7 @@
 
 # Custom format called 'nice'
 [pretty]
-  nice = %C(yellow)%h%C(red)%d %C(reset)%s %C(green)%an %C(bold black)%cr
+  nice = %C(yellow)%h%C(red)%d %C(reset)%s %C(green)%an %C(brightblack)%cr
 
 [log]
   date = relative
@@ -77,7 +81,8 @@
   show-branch = true
 
 [push]
-  default = current
+  autoSetupRemote = true  # easier to push new branches
+  default = current  # push only current branch by default
 
 [rebase]
   stat = true
