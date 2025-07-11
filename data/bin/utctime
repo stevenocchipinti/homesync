@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-require "time"
-
-datetime = ARGV[0] ? DateTime.parse(ARGV[0]) : DateTime.now
-puts datetime.to_time.utc.iso8601

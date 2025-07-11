@@ -1,8 +1,0 @@
-#!/bin/bash
-TREE="tree -CA"
-
-if [ -f .gitignore ]; then
-  $TREE -I $(cat .gitignore | \grep -O "^[^#]" | paste -sd "|" -)
-else
-  $TREE
-fi
