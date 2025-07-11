@@ -1,6 +1,9 @@
 set -x EDITOR nvim
 set -x PATH ~/bin $PATH
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+fnm env --use-on-cd --shell fish | source
+
 if type -q bat
   alias cat=bat
 end
